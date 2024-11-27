@@ -1,0 +1,24 @@
+{
+  "name": "integration-testing",
+  "version": "1.0.0",
+  "main": "bin.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc -b",
+    "dev": "npx tsc -b && node dist/bin.js",
+    "db:migrate": "npx prisma migrate dev",
+    "test": "vitest",
+    "test:integration": "./scripts/run-integration.sh"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@types/express": "^5.0.0",
+    "express": "^4.21.1",
+    "prisma": "^5.22.0"
+  },
+  "devDependencies": {
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.5"
+  }
+}
